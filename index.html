@@ -300,7 +300,22 @@
       
         
           
-            
+            <h4 id="安装Git和Node"><a href="#安装Git和Node" class="headerlink" title="安装Git和Node"></a>安装Git和Node</h4><h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br><span class="line">hexo -v  // 查看版本号</span><br></pre></td></tr></table></figure>
+<h4 id="创建文件目录"><a href="#创建文件目录" class="headerlink" title="创建文件目录"></a>创建文件目录</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir hexo // 创建名为hexo(文件名可自定义)的文件夹</span><br><span class="line">cd hexo    // 进入创建的名为hexo的文件内</span><br></pre></td></tr></table></figure>
+<h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h4 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<h4 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="启动服务"><a href="#启动服务" class="headerlink" title="启动服务"></a>启动服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server  // 快捷键 hexo s</span><br></pre></td></tr></table></figure>
+<h4 id="在本地查看效果"><a href="#在本地查看效果" class="headerlink" title="在本地查看效果"></a>在本地查看效果</h4><p>打开浏览器，输入网址<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
+<h4 id="安装-Git-部署器"><a href="#安装-Git-部署器" class="headerlink" title="安装 Git 部署器"></a>安装 Git 部署器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git -save</span><br></pre></td></tr></table></figure>
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>在 <code>hexo</code> 的根目录下会有 <code>_config.yml</code> 文件，打开 <code>_config.yml</code> 文件，在文件最末尾，修改如下配置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/zhanghr897/zhanghr897.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>部署成功以后，在浏览器输入地址<a href="https://zhanghr897.github.io/即可在线浏览自己的博客啦！！！">https://zhanghr897.github.io/即可在线浏览自己的博客啦！！！</a></p>
+<h4 id="创建新的博客"><a href="#创建新的博客" class="headerlink" title="创建新的博客"></a>创建新的博客</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;newBlog&quot;   // 快捷键 hexo n</span><br></pre></td></tr></table></figure>
+<p>在 <code>/hexo/source/_posts/</code> 目录下即可看到一个名为 <code>newBlog.md</code> 文件，在这个文件内编辑你的内容</p>
+<h4 id="发布新博客"><a href="#发布新博客" class="headerlink" title="发布新博客"></a>发布新博客</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean     </span><br><span class="line">hexo generate  // 快捷键 hexo g</span><br><span class="line">hexo deploy    // 快捷键 hexo d</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -424,6 +439,156 @@
 <li>cd projectName</li>
 <li>npm run dev</li>
 </ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zhanghr897.github.io/2018/07/18/Typora使用笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Danae">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Danae的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/18/Typora使用笔记/" itemprop="url">Typora 使用心得</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-18T23:40:35+08:00">
+                2018-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><p>子需要插入目录的地方写上<code>[TOC]</code>，就会自动生成目录</p>
+<h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p><code>#</code>加空格，一级标题#，二级标题##，一共六级标题</p>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p><code>-</code>加空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表</span><br></pre></td></tr></table></figure>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p><code>1.</code>加空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表</span><br></pre></td></tr></table></figure>
+<h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p><code>[]()</code> 中括号输入想要写的单词，小括号里面写链接地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[百度](https://www.baidu.com/)</span><br></pre></td></tr></table></figure>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><p>可以直接拖进来</p>
+<h3 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h3><p>esc下面的那个波浪线，需要一对，一般用来做单行代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`栗子`</span><br></pre></td></tr></table></figure>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p><code>&gt;</code>加空格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 这是一段引用</span><br></pre></td></tr></table></figure>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>输入三个esc下面的那个波浪线，然后回车，直接输入代码块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">​</span><br></pre></td></tr></table></figure>
+<p>.box{<br>    width: 100%;<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 下划线</span><br><span class="line"></span><br><span class="line">`&lt;u&gt;&lt;/u&gt;`&lt;u&gt;把需要下划线的部分放在标签中间&lt;/u&gt;</span><br></pre></td></tr></table></figure></p>
+<p><u>此处需要下划线</u><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 加粗</span><br><span class="line"></span><br><span class="line">**一对双星号**</span><br></pre></td></tr></table></figure></p>
+<p><strong>加粗的文字</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 斜体</span><br><span class="line"></span><br><span class="line">*一对单星号*</span><br></pre></td></tr></table></figure></p>
+<p><em>斜体文字</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 删除线</span><br><span class="line"></span><br><span class="line">~~一对波浪线~~</span><br></pre></td></tr></table></figure></p>
+<p><del>需要删除的文字</del><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 表情符号</span><br><span class="line"></span><br><span class="line">两个冒号中间加上描述语:happy:</span><br></pre></td></tr></table></figure></p>
+<p>:happy: // 😄<br>:cry:   // 😢<br><code>`</code></p>
+<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>通过快捷键<code>cmd + t</code>（windows系统下<code>ctrl + t</code>）打开，填出行数、列数</p>
+<h3 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h3><ul>
+<li>创建链接 <code>cmd + k</code></li>
+<li>生成表格 <code>cmd + t</code></li>
+<li>加粗  <code>cmd + b</code></li>
+<li>斜体 <code>cmd + i</code></li>
+<li>标题 <code>cmd + 数字</code></li>
+<li>下划线 <code>cmd + u</code></li>
+<li>插入图片 <code>cmd + option + i</code></li>
+</ul>
 
           
         
@@ -624,7 +789,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
